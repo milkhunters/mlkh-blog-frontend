@@ -38,7 +38,7 @@ const loading = ref(false)
         <p class="text-center text-sm text-gray-500">
           Нет аккаунта?
           <RouterLink :to="ROUTES.SIGN_UP" class="text-blue-500 hover:underline"
-            >Зарегистрируйтесь</RouterLink
+            >Зарегистрироваться</RouterLink
           >
         </p>
         <p class="text-center text-xs text-gray-500">
