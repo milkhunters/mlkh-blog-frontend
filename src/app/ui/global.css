@@ -1,2 +1,9 @@
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
+
+@layer base {
+  body,
+  .p-component {
+    font-family: 'InterVariable', 'Inter', sans-serif;
+  }
+}
