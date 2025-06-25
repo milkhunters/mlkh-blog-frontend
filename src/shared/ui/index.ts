@@ -1,3 +1,3 @@
-import AppLogo from './logo/app-logo.vue'
+import AppLogo from './logo/AppLogo.vue'
 
 export { AppLogo }

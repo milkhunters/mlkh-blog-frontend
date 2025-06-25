@@ -1,3 +1,3 @@
-import SignInForm from './ui/sign-in-form.vue'
+import SignInForm from './ui/SignInForm.vue'
 
 export { SignInForm }

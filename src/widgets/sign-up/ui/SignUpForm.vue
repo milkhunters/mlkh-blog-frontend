@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { AppLogo } from '@/shared/ui'
 import { UserPlus } from 'lucide-vue-next'
 import { ROUTES } from '@/shared/router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const username = ref('')
 const firstName = ref('')
@@ -26,18 +29,28 @@ const passwordRepeat = ref('')
 
     <div class="flex flex-col justify-center items-center w-full md:w-2/3 h-full p-4 md:p-10">
       <form class="flex flex-col gap-4 w-full max-w-[350px]">
-        <h1 class="text-center text-2xl md:text-2xl font-semibold">Создать аккаунт</h1>
-
+        <div class="space-y-1">
+          <h1 class="text-center text-2xl md:text-2xl font-semibold">{{ t('auth.signUp') }}</h1>
+          <h2 class="text-center text-md text-gray-500">
+            {{ t('auth.underSignUp') }}
+          </h2>
+        </div>
         <div class="space-y-3 w-full">
-          <InputText v-model="username" placeholder="Имя пользователя" class="w-full" />
-          <InputText v-model="firstName" placeholder="Имя" class="w-full" />
-          <InputText v-model="lastName" placeholder="Фамилия" class="w-full" />
-          <InputText v-model="email" type="email" placeholder="Электронная почта" class="w-full" />
-          <Password v-model="password" :feedback="false" placeholder="Пароль" toggleMask fluid />
+          <InputText v-model="username" :placeholder="t('auth.username')" class="w-full" />
+          <InputText v-model="firstName" :placeholder="t('auth.firstName')" class="w-full" />
+          <InputText v-model="lastName" :placeholder="t('auth.lastName')" class="w-full" />
+          <InputText v-model="email" type="email" :placeholder="t('auth.email')" class="w-full" />
+          <Password
+            v-model="password"
+            :feedback="false"
+            :placeholder="t('auth.password')"
+            toggleMask
+            fluid
+          />
           <Password
             v-model="passwordRepeat"
             :feedback="false"
-            placeholder="Повторите пароль"
+            :placeholder="t('auth.repeatPassword')"
             toggleMask
             fluid
           />
@@ -45,16 +58,17 @@ const passwordRepeat = ref('')
 
         <Button class="w-full flex gap-2 justify-center items-center">
           <UserPlus :size="18" />
-          <span>Создать аккаунт</span>
+          <span>{{ t('auth.createAccount') }}</span>
         </Button>
 
         <p class="text-center text-sm text-gray-500">
-          Есть аккаунт?
-          <RouterLink :to="ROUTES.SIGN_IN" class="text-blue-500 hover:underline">Войти</RouterLink>
+          {{ t('auth.haveAccount') }}
+          <RouterLink :to="ROUTES.SIGN_IN" class="text-blue-500 hover:underline">
+            {{ t('auth.signIn') }}
+          </RouterLink>
         </p>
         <p class="text-center text-xs text-gray-500">
-          Нажимая «Создать аккаунт», вы принимаете пользовательское соглашение и политику
-          конфиденциальности
+          {{ t('auth.termsSignUp') }}
         </p>
       </form>
     </div>

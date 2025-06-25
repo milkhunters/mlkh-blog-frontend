@@ -1,3 +1,3 @@
-import SignUpPage from './ui/sign-up-page.vue'
+import SignUpPage from './ui/SignUpPage.vue'
 
 export { SignUpPage }

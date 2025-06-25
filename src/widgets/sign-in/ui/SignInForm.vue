@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { AppLogo } from '@/shared/ui'
 import { LogIn } from 'lucide-vue-next'
 import { ROUTES } from '@/shared/router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const username = ref('')
 const password = ref('')
@@ -23,26 +26,41 @@ const loading = ref(false)
 
     <div class="flex flex-col justify-center items-center w-full md:w-2/3 h-full p-4 md:p-10">
       <form class="flex flex-col gap-4 w-full max-w-[350px]">
-        <h1 class="text-center text-2xl md:text-2xl font-semibold">Вход</h1>
-
+        <div class="space-y-1">
+          <h1 class="text-center text-2xl md:text-3xl font-semibold">{{ t('auth.signIn') }}</h1>
+          <h2 class="text-center text-md text-gray-500">
+            {{ t('auth.underSignIn') }}
+          </h2>
+        </div>
         <div class="space-y-3 w-full">
-          <InputText v-model="username" placeholder="Имя пользователя" class="w-full" />
-          <Password v-model="password" :feedback="false" placeholder="Пароль" toggleMask fluid />
+          <InputText v-model="username" :placeholder="t('auth.username')" class="w-full" />
+          <Password
+            v-model="password"
+            :feedback="false"
+            :placeholder="t('auth.password')"
+            toggleMask
+            fluid
+          />
+          <RouterLink
+            :to="ROUTES.RESET_PASSWORD"
+            class="flex justify-end text-xs text-blue-500 hover:underline"
+            >{{ t('auth.forgotPassword') }}</RouterLink
+          >
         </div>
 
         <Button class="w-full flex gap-2 justify-center items-center" :loading="loading">
           <LogIn :size="18" />
-          <span>Войти</span>
+          <span>{{ t('auth.loginButton') }}</span>
         </Button>
 
         <p class="text-center text-sm text-gray-500">
-          Нет аккаунта?
-          <RouterLink :to="ROUTES.SIGN_UP" class="text-blue-500 hover:underline"
-            >Зарегистрироваться</RouterLink
-          >
+          {{ t('auth.noAccount') }}
+          <RouterLink :to="ROUTES.SIGN_UP" class="text-blue-500 hover:underline">
+            {{ t('auth.signUp') }}
+          </RouterLink>
         </p>
         <p class="text-center text-xs text-gray-500">
-          Нажимая «Войти», вы принимаете пользовательское соглашение и политику конфиденциальности
+          {{ t('auth.termsSignIn') }}
         </p>
       </form>
     </div>

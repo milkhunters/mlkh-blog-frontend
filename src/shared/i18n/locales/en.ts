@@ -1,0 +1,23 @@
+export default {
+  auth: {
+    signUp: 'Create Account',
+    signIn: 'Sign In',
+    underSignIn: 'Enter your credentials to access your account',
+    underSignUp: 'Enter your details to create a new account',
+    username: 'Username',
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    email: 'Email',
+    password: 'Password',
+    repeatPassword: 'Repeat Password',
+    createAccount: 'Create Account',
+    loginButton: 'Sign In',
+    haveAccount: 'Already have an account?',
+    noAccount: "Don't have an account?",
+    forgotPassword: 'Forgot Password?',
+    resetPassword: 'Reset Password',
+    resetPasswordButton: 'Reset Password',
+    termsSignUp: 'By clicking "Create Account", you accept the User Agreement and Privacy Policy',
+    termsSignIn: 'By clicking "Sign In", you accept the User Agreement and Privacy Policy',
+  },
+}
