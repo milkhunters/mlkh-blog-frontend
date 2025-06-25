@@ -3,5 +3,5 @@ import { SignUpForm } from '@/widgets/sign-up'
 </script>
 
 <template>
-  <signUpForm />
+  <SignUpForm />
 </template>
