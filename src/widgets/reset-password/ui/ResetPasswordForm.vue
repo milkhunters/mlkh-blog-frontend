@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { AppLogo } from '@/shared/ui'
-import { LogIn } from 'lucide-vue-next'
-import { ROUTES } from '@/shared/router'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-
-const username = ref('')
-const password = ref('')
-const loading = ref(false)
 </script>
 
 <template>
@@ -26,35 +19,10 @@ const loading = ref(false)
 
     <div class="flex flex-col justify-center items-center w-full md:w-2/3 h-full p-4 md:p-10">
       <form class="flex flex-col gap-4 w-full max-w-[350px]">
-        <h1 class="text-center text-2xl md:text-2xl font-semibold">{{ t('auth.signIn') }}</h1>
-
-        <div class="space-y-3 w-full">
-          <InputText v-model="username" :placeholder="t('auth.username')" class="w-full" />
-          <Password
-            v-model="password"
-            :feedback="false"
-            :placeholder="t('auth.password')"
-            toggleMask
-            fluid
-          />
-        </div>
-
-        <Button class="w-full flex gap-2 justify-center items-center" :loading="loading">
-          <LogIn :size="18" />
-          <span>{{ t('auth.loginButton') }}</span>
-        </Button>
-
-        <p class="text-center text-sm text-gray-500">
-          {{ t('auth.noAccount') }}
-          <RouterLink :to="ROUTES.SIGN_UP" class="text-blue-500 hover:underline">
-            {{ t('auth.signUp') }}
-          </RouterLink>
-        </p>
-        <p class="text-center text-xs text-gray-500">
-          {{ t('auth.termsSignIn') }}
-        </p>
+        <h1 class="text-center text-2xl md:text-2xl font-semibold">
+          {{ t('auth.resetPassword') }}
+        </h1>
       </form>
-      reset
     </div>
   </div>
 </template>
