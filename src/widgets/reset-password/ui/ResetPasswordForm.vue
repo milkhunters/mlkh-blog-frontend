@@ -20,7 +20,7 @@ const { t } = useI18n()
     <div class="flex flex-col justify-center items-center w-full md:w-2/3 h-full p-4 md:p-10">
       <form class="flex flex-col gap-4 w-full max-w-[350px]">
         <h1 class="text-center text-2xl md:text-2xl font-semibold">
-          {{ t('auth.resetPassword') }}
+          Work in progress - {{ t('auth.resetPassword') }}
         </h1>
       </form>
     </div>
