@@ -1,6 +1,6 @@
 import axios from 'axios'
 
 export const httpClient = axios.create({
-  baseURL: '',
+  baseURL: 'https://jsonplaceholder.typicode.com/',
   timeout: 5_000,
 })

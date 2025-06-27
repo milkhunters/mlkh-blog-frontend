@@ -5,3 +5,5 @@ import { ROUTES } from '@/shared/router'
 <template>
   <RouterLink :to="ROUTES.FEED" class="text-3xl font-semibold select-none">milkhunters</RouterLink>
 </template>
+
+<style scoped></style>

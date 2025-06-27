@@ -1,7 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div></div>
+  <div>
+    Defauilt Layout
+    <RouterView />
+  </div>
 </template>
 
 <style scoped></style>

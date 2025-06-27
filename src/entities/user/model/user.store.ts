@@ -1,20 +1,32 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { UserRep } from '../api/user.rep'
 
 export const useUserStore = defineStore('user', () => {
   const repository = new UserRep()
 
-  const user = ref(null)
+  const currentUser = reactive({})
+  const isCurrentUserLoading = ref(false)
 
   async function loadCurrentUser() {
     await repository.getCurrentUser()
   }
-  function signIn() {}
-  function signUp() {}
-  function signOut() {}
-  function confirmEmail() {}
-  function resetPassword() {}
+  async function signIn() {}
+  async function signUp() {}
+  async function signOut() {}
+  async function confirmEmail() {}
+  async function resetPassword() {}
+  async function bootstrap() {}
 
-  return { user, loadCurrentUser, signIn, signUp, signOut, confirmEmail, resetPassword }
+  return {
+    currentUser,
+    isCurrentUserLoading,
+    loadCurrentUser,
+    signIn,
+    signUp,
+    signOut,
+    confirmEmail,
+    resetPassword,
+    bootstrap,
+  }
 })

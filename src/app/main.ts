@@ -7,6 +7,7 @@ import { preset } from './ui/preset'
 import { options } from './ui/options'
 import { i18n } from '@/shared/i18n'
 import './ui/global.css'
+import 'primeicons/primeicons.css'
 
 const pinia = createPinia()
 const app = createApp(App)

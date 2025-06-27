@@ -5,12 +5,12 @@ export const preset = definePreset(Aura, {
   components: {
     button: {
       root: {
-        borderRadius: '0.75rem',
+        borderRadius: '1rem',
       },
     },
     inputtext: {
       root: {
-        borderRadius: '0.75rem',
+        borderRadius: '1rem',
       },
     },
   },
