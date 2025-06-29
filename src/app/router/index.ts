@@ -9,10 +9,6 @@ import { AuthLayout, DefaultLayout } from '@/widgets/layouts'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: ROUTES.SIGN_IN,
-  },
-  {
-    path: '',
     component: DefaultLayout,
     children: [
       {
@@ -21,9 +17,10 @@ const routes: RouteRecordRaw[] = [
         name: 'feed',
       },
     ],
+    redirect: { path: ROUTES.SIGN_IN },
   },
   {
-    path: '',
+    path: '/',
     component: AuthLayout,
     children: [
       {
