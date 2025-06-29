@@ -3,8 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type HttpErrorDetail = {
-    attrs: Array<any>;
-    field: string;
-    reason: string;
-};
-
+  attrs: Array<any>
+  field: string
+  reason: string
+}

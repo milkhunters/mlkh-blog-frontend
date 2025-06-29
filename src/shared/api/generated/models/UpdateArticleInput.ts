@@ -1,8 +1,8 @@
 /* generated using openapi-typescript-codegen -- do not edit */
 /* istanbul ignore file */
 /* tslint:disable */
-/* eslint-disable */
-import type { ArticleState } from './ArticleState';
+
+import type { ArticleState } from './ArticleState'
 /**
  * Update article by id.
  *
@@ -10,10 +10,9 @@ import type { ArticleState } from './ArticleState';
  *
  */
 export type UpdateArticleInput = {
-    content: string;
-    poster?: string | null;
-    state: ArticleState;
-    tags: Array<string>;
-    title: string;
-};
-
+  content: string
+  poster?: string | null
+  state: ArticleState
+  tags: Array<string>
+  title: string
+}
