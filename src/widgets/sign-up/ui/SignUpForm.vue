@@ -16,14 +16,14 @@ const passwordRepeat = ref('')
 
 <template>
   <div class="space-y-1 mb-4">
-    <h1 class="text-center text-2xl md:text-2xl font-semibold">
+    <h1 class="text-center text-2xl font-semibold">
       {{ t('auth.createAccount.title') }}
     </h1>
     <h2 class="text-center text-md text-gray-500">
       {{ t('auth.createAccount.subtitle') }}
     </h2>
   </div>
-  <form class="flex flex-col gap-4 w-auto">
+  <form class="flex flex-col gap-4 px-4 md:p-0">
     <InputField
       v-model="username"
       id="username"
@@ -31,7 +31,7 @@ const passwordRepeat = ref('')
       :placeholder="t('auth.common.enterUsername')"
       error-code=""
     />
-    <div class="flex flex-col md:flex-row gap-2">
+    <div class="flex flex-col md:flex-row gap-4">
       <InputField
         v-model="firstName"
         id="firstName"
@@ -69,7 +69,7 @@ const passwordRepeat = ref('')
       error-code=""
     />
 
-    <Button :label="t('auth.createAccount.button')" icon="pi pi-user-plus" class="h-12" />
+    <Button :label="t('auth.createAccount.button')" icon="pi pi-user-plus" class="h-11" />
 
     <p class="text-center text-sm text-gray-500">
       {{ t('auth.createAccount.haveAccount') }}

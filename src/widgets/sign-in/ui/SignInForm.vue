@@ -13,14 +13,14 @@ async function handleFormSubmit() {}
 </script>
 
 <template>
-  <div class="space-y-2 mb-3">
+  <div class="space-y-2 mb-3 px-4 md:px-0">
     <h1 class="text-center text-2xl md:text-3xl font-semibold">{{ t('auth.signIn.title') }}</h1>
     <h2 class="text-center text-md text-gray-500">
       {{ t('auth.signIn.subtitle') }}
     </h2>
   </div>
 
-  <form @submit.prevent="handleFormSubmit" class="flex flex-col w-full gap-3 max-w-[400px]">
+  <form @submit.prevent="handleFormSubmit" class="flex flex-col px-4 md:p-0 gap-3">
     <InputField
       v-model="username"
       id="username"
@@ -32,7 +32,7 @@ async function handleFormSubmit() {}
     <div class="space-y-2">
       <PasswordField
         v-model="password"
-        id="username"
+        id="password"
         :label="t('auth.common.password')"
         :placeholder="t('auth.common.enterPassword')"
         error-code=""
@@ -45,7 +45,7 @@ async function handleFormSubmit() {}
       >
     </div>
 
-    <Button :label="t('auth.signIn.button')" icon="pi pi-sign-in" class="h-12" />
+    <Button :label="t('auth.signIn.button')" icon="pi pi-sign-in" class="h-11" />
 
     <p class="text-center text-sm text-gray-500">
       {{ t('auth.signIn.noAccount') }}

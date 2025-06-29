@@ -15,7 +15,7 @@ const model = defineModel<string>()
     <label :for="id">{{ label }}</label>
     <Password
       v-model="model"
-      class="h-12"
+      class="h-11"
       :feedback="false"
       :invalid="!!errorCode"
       :placeholder

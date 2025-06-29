@@ -13,7 +13,7 @@ const model = defineModel<string>()
 <template>
   <div class="flex flex-col gap-1 w-full">
     <label :for="id">{{ label }}</label>
-    <InputText class="h-12" :invalid="!!errorCode" v-model="model" :id :placeholder />
+    <InputText class="h-11" :invalid="!!errorCode" v-model="model" :id :placeholder />
     <Message v-show="errorCode" size="small" severity="error" variant="simple">{{
       errorCode
     }}</Message>

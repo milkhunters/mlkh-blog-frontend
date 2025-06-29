@@ -36,10 +36,12 @@ export default {
       step1: 'Send code',
       step1Title: 'Enter email address you used to register.',
       step2: 'Reset password',
-      step2Title: 'Enter the code sent to {email}',
+      step2Title: 'Enter the code sent to ',
       newPassword: 'New password',
       repeatNewPassword: 'Repeat new password',
       enterNewPassword: 'Enter new password',
+      changeEmail: 'Change Email',
+
       button: 'Reset Password',
     },
   },
