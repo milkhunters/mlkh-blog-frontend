@@ -1,4 +1,4 @@
-<script setup land="ts">
+<script setup lang="ts">
 import { ROUTES } from '@/shared/router'
 </script>
 

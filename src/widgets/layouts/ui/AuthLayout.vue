@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AppLogo } from '@/shared/ui'
+import { MainLogo } from '@/shared/ui'
 import { ref } from 'vue'
 
 const visible = ref(false)
@@ -10,7 +10,7 @@ const visible = ref(false)
     <div
       class="sticky py-3 px-4 flex justify-between items-center md:bg-transparent border-b-2 border-b-gray-200 md:absolute left-6 top-0 md:top-6 z-10"
     >
-      <AppLogo class="h-8 w-auto" />
+      <MainLogo class="h-8 w-auto" />
 
       <div class="card flex justify-center md:hidden">
         <Drawer v-model:visible="visible" position="right" header="Drawer">
