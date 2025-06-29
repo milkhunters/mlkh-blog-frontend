@@ -1,1 +1,3 @@
-export { default as FeedPage } from './ui/feed-page.vue'
+import FeedPage from './ui/FeedPage.vue'
+
+export { FeedPage }
